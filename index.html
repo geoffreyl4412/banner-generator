@@ -3,17 +3,50 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>jQuery Template</title>
+    <title>jQuery Banner</title>
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <script> 
-    $(function(){
-        //your code goes here!
-    });
+    <script>
+        $(function() {
+            $('button').click(function() {
+                var name = $('#nameType').val();
+                $('h1').html(name);
+                var color = $('#colorSelect').val();
+                $('h1').css('color', color);i
+            });
+        });
     </script>
+    <style>
+        #banner {
+        width: 800px;
+        height: 400px;
+        background: linear-gradient(to bottom left, red, yellow);    
+        }
+    </style>
 </head>
 
 <body>
+    <strong>Full Name:</strong><br>
+    <input id="nameType" required><br>
 
+    <strong>Highest completed level of education:</strong><br>
+    <input type="radio" name="education" value="middle_school"> Middle School<br>
+    <input type="radio" name="education" value="high_school"> High School<br>
+    <input type="radio" name="education" value="college"> College<br>
+
+    <strong>Choose a color:</strong><br>
+    <select id="colorSelect">
+        <option value="Black" selected> Black </option>
+        <option value="Red"> Red </option>
+        <option value="Orange"> Orange </option>
+        <option value="Yellow"> Yellow </option>
+        <option value="Green"> Green </option>
+        <option value="Blue"> Blue </option>
+        <option value="Purple"> Purple </option>
+    </select><br>
+    <button>Create Banner!</button>
+    <div id="banner"></div>
 </body>
+
+<h1></h1>
 
 </html>
