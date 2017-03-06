@@ -11,27 +11,32 @@
                 var name = $('#nameType').val();
                 $('h1').html(name);
                 var color = $('#colorSelect').val();
-                $('h1').css('color', color);i
+                $('h1').css('color', color);
+                var education = $('input[name="educationLvl"]:checked').val();
+                $('h2').html(education);
+                $('h2').css('color', color);
+                
             });
         });
     </script>
     <style>
         #banner {
-        width: 800px;
-        height: 400px;
-        background: linear-gradient(to bottom left, red, yellow);    
+            width: 800px;
+            height: 400px;
+            background: linear-gradient(to bottom left, red, yellow);
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
     <strong>Full Name:</strong><br>
-    <input id="nameType" required><br>
+    <input id="nameType"><br>
 
     <strong>Highest completed level of education:</strong><br>
-    <input type="radio" name="education" value="middle_school"> Middle School<br>
-    <input type="radio" name="education" value="high_school"> High School<br>
-    <input type="radio" name="education" value="college"> College<br>
+    <input type="radio" name="educationLvl" value="Middle School"> Middle School<br>
+    <input type="radio" name="educationLvl" value="High School"> High School<br>
+    <input type="radio" name="educationLvl" value="College"> College<br>
 
     <strong>Choose a color:</strong><br>
     <select id="colorSelect">
@@ -44,7 +49,11 @@
         <option value="Purple"> Purple </option>
     </select><br>
     <button>Create Banner!</button>
-    <div id="banner"></div>
+    <div id="banner">
+        <h1></h1>
+        <h2></h2>
+        <h3></h3>
+    </div>
 </body>
 
 <h1></h1>
